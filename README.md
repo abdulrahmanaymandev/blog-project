@@ -1,8 +1,6 @@
 # blog-pro-MERN-stack
 This repository is the client side and the server side of Blog Project built with MERN stack techs  for educational purpose 
 
-<img src="mern.png">
-
 # Usage
 - Install Mongo DB on your local machine or use Mongo DB Cloud -> [Go To MongoDB Website](https://www.mongodb.com)
 - Create Cloudinary account for storing the images -> [Go To Cloudinary Website](https://cloudinary.com/)
