@@ -5,8 +5,9 @@
   "main": "app.js",
   "scripts": {
     "dev": "nodemon app",
+    "start": "node app.js",
     "seed": "node seed/seed.js",
-  "clear": "node seed/clear.js"
+    "clear": "node seed/clear.js"
   },
   "author": "Youssef Abbas",
   "license": "ISC",

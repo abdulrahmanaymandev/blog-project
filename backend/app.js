@@ -33,8 +33,12 @@ app.use(rateLimiting({
 }));
 
 // Cors Policy
+const allowedOrigins = (process.env.CLIENT_DOMAIN || "http://localhost:3000")
+  .split(",")
+  .map((origin) => origin.trim());
+
 app.use(cors({
-  origin: "http://localhost:3000"
+  origin: allowedOrigins
 }));
 
 // Routes
