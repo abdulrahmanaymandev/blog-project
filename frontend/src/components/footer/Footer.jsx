@@ -10,10 +10,10 @@ const Footer = () => {
         {/* Brand & Tagline */}
         <div className="footer-brand">
           <Link to="/" className="footer-logo">
-            {/* <span className="footer-logo-dot"></span> */}
             <img src="/favicon0.ico" alt="Inkline" width={35} height={35} />
             <span className="footer-logo-text">Inkline</span>
           </Link>
+
           <p className="footer-tagline">
             Thoughtful writing, beautifully kept. Inkline is an independent
             publishing platform designed for writers who value craft and readers
@@ -25,22 +25,29 @@ const Footer = () => {
         <div className="footer-links-group">
           <div className="footer-links-col">
             <h4 className="footer-col-title">Explore</h4>
+
             <ul className="footer-list">
               <li>
                 <Link to="/" className="footer-link">
                   Home
                 </Link>
               </li>
+
               <li>
                 <Link to="/posts" className="footer-link">
                   Library
                 </Link>
               </li>
+
               <li>
-                <Link to="/posts?category=Technology" className="footer-link">
+                <Link
+                  to="/posts?category=Technology"
+                  className="footer-link"
+                >
                   Technology
                 </Link>
               </li>
+
               <li>
                 <Link to="/posts?category=Design" className="footer-link">
                   Design
@@ -51,32 +58,37 @@ const Footer = () => {
 
           <div className="footer-links-col">
             <h4 className="footer-col-title">Inkline</h4>
+
             <ul className="footer-list">
               <li>
-                <a href="#" className="footer-link cursor-disabled">
+                <Link to="/about" className="footer-link">
                   About Us
-                </a>
+                </Link>
               </li>
+
               <li>
-                <a href="#" className="footer-link cursor-disabled">
+                <Link to="/careers" className="footer-link">
                   Careers
-                </a>
+                </Link>
               </li>
+
               <li>
-                <a href="#" className="footer-link cursor-disabled">
+                <Link to="/press-kit" className="footer-link">
                   Press Kit
-                </a>
+                </Link>
               </li>
+
               <li>
-                <a href="#" className="footer-link cursor-disabled">
+                <Link to="/contact" className="footer-link">
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
 
           <div className="footer-links-col">
             <h4 className="footer-col-title">Social</h4>
+
             <ul className="footer-list">
               <li>
                 <a
@@ -88,6 +100,7 @@ const Footer = () => {
                   Twitter
                 </a>
               </li>
+
               <li>
                 <a
                   href="https://github.com"
@@ -98,6 +111,7 @@ const Footer = () => {
                   GitHub
                 </a>
               </li>
+
               <li>
                 <a
                   href="https://linkedin.com"
@@ -108,6 +122,7 @@ const Footer = () => {
                   LinkedIn
                 </a>
               </li>
+
               <li>
                 <a
                   href="https://dribbble.com"
@@ -128,16 +143,19 @@ const Footer = () => {
           <p className="footer-copyright">
             &copy; {currentYear} Inkline. All rights reserved.
           </p>
+
           <div className="footer-legal">
-            <a href="#" className="footer-legal-link cursor-disabled">
+            <Link to="/privacy-policy" className="footer-legal-link">
               Privacy Policy
-            </a>
-            <a href="#" className="footer-legal-link cursor-disabled">
+            </Link>
+
+            <Link to="/terms" className="footer-legal-link">
               Terms of Service
-            </a>
-            <a href="#" className="footer-legal-link cursor-disabled">
+            </Link>
+
+            <Link to="/cookies" className="footer-legal-link">
               Cookie Settings
-            </a>
+            </Link>
           </div>
         </div>
       </div>
