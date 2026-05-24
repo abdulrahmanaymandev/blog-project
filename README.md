@@ -1,4 +1,4 @@
-# blog-pro-MERN-stack
+# blog-MERN-stack
 This repository is the client side and the server side of Blog Project built with MERN stack techs
 
 # Usage
