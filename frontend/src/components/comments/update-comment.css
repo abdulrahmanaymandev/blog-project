@@ -1,0 +1,114 @@
+.update-comment-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(26, 40, 32, 0.4);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  animation: modalFadeIn 0.25s ease-out;
+}
+
+.update-comment-modal {
+  width: min(500px, 100%);
+  background: var(--surface-color);
+  padding: 32px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-lift);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  animation: modalSlideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.update-comment-close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--gray-color);
+  font-size: 16px;
+  padding: 4px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.update-comment-close-btn:hover {
+  background: var(--surface-muted);
+  color: var(--primary-color);
+}
+
+.update-comment-title {
+  font-family: var(--font-serif);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin: 0 0 6px 0;
+}
+
+.update-comment-desc {
+  font-size: 13px;
+  color: var(--secondary-color);
+  margin: 0 0 24px 0;
+}
+
+.update-comment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.comment-form-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.update-comment-textarea {
+  width: 100%;
+  border: 1px solid var(--border-color);
+  background: white;
+  border-radius: var(--radius-sm);
+  padding: 12px 16px;
+  font-size: 14px;
+  font-family: var(--font-sans);
+  color: var(--primary-color);
+  line-height: 1.6;
+  resize: vertical;
+  min-height: 120px;
+  transition: all 0.2s ease;
+}
+
+.update-comment-textarea:focus {
+  outline: none;
+  border-color: var(--green-color);
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.12);
+}
+
+.btn-update-comment-submit {
+  background: var(--green-color);
+  color: white;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  height: 44px;
+  border-radius: 99px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
+  transition: all 0.2s ease;
+}
+
+.btn-update-comment-submit:hover {
+  background: var(--green-sea-color);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(16, 185, 129, 0.3);
+}

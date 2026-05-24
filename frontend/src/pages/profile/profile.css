@@ -1,0 +1,367 @@
+.profile-page-wrapper {
+  max-width: 100%;
+  padding-bottom: 96px;
+  font-family: var(--font-sans);
+}
+
+/* Loader */
+.profile-loader-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 24px;
+  color: var(--secondary-color);
+  gap: 16px;
+}
+
+/* 1. Header Hero Banner */
+.profile-hero-section {
+  position: relative;
+  background: var(--surface-color);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 48px;
+}
+
+.profile-cover-banner {
+  height: 240px;
+  width: 100%;
+  background: linear-gradient(135deg, var(--green-color) 0%, var(--green-sea-color) 100%);
+  position: relative;
+}
+
+.profile-cover-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 70% 30%, rgba(255, 255, 255, 0.15) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.profile-info-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: -80px; /* Overlap avatar onto cover */
+  position: relative;
+  z-index: 10;
+}
+
+/* Avatar Wrapper */
+.profile-avatar-wrapper {
+  margin-bottom: 20px;
+}
+
+.profile-avatar-inner {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 6px solid var(--surface-color);
+  box-shadow: var(--shadow-lift);
+  overflow: visible;
+  background: var(--surface-muted);
+}
+
+.profile-avatar-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Camera trigger over Avatar */
+.avatar-upload-trigger {
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  color: white;
+  border: 2px solid var(--surface-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.avatar-upload-trigger:hover {
+  background: var(--green-color);
+  transform: scale(1.08);
+}
+
+.avatar-upload-trigger i {
+  font-size: 16px;
+}
+
+/* Avatar Save/Cancel controls */
+.avatar-save-actions {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(50%);
+  display: flex;
+  gap: 8px;
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: 99px;
+  padding: 4px;
+  box-shadow: var(--shadow-lift);
+}
+
+.btn-avatar-save,
+.btn-avatar-cancel {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.btn-avatar-save {
+  background: var(--green-color);
+  color: white;
+}
+
+.btn-avatar-save:hover {
+  background: var(--green-sea-color);
+}
+
+.btn-avatar-cancel {
+  background: var(--surface-muted);
+  color: var(--secondary-color);
+  border: 1px solid var(--border-color);
+}
+
+.btn-avatar-cancel:hover {
+  background: var(--border-color);
+}
+
+/* Profile Text Info */
+.profile-display-name {
+  font-family: var(--font-serif);
+  font-size: clamp(28px, 4vw, 36px);
+  font-weight: 700;
+  color: var(--primary-color);
+  margin: 0 0 10px 0;
+  text-transform: capitalize;
+}
+
+.profile-display-bio {
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--secondary-color);
+  max-width: 520px;
+  margin: 0 0 16px 0;
+}
+
+.profile-joined-date {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--gray-color);
+  margin-bottom: 28px;
+}
+
+/* Stats Pill Bar */
+.profile-stats-bar {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 28px;
+}
+
+.stat-pill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-value {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.stat-label {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--gray-color);
+  margin-top: 4px;
+}
+
+/* Edit profile Button */
+.btn-profile-edit {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: white;
+  border: 1px solid var(--border-color);
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 14px;
+  padding: 10px 24px;
+  border-radius: 99px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-profile-edit:hover {
+  background: var(--surface-muted);
+  border-color: var(--border-strong);
+  transform: translateY(-1px);
+}
+
+/* 2. Feed Section */
+.profile-feed-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 64px 24px 0 24px;
+}
+
+.profile-feed-title {
+  font-family: var(--font-serif);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin: 0 0 32px 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.profile-feed-title::after {
+  content: "";
+  height: 1px;
+  background: var(--border-color);
+  flex-grow: 1;
+}
+
+.profile-posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 32px;
+}
+
+.profile-empty-posts {
+  text-align: center;
+  padding: 64px 24px;
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+}
+
+.profile-empty-posts i {
+  font-size: 40px;
+  color: var(--gray-color);
+  margin-bottom: 16px;
+  display: block;
+}
+
+.profile-empty-posts h3 {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  margin: 0 0 6px 0;
+}
+
+.profile-empty-posts p {
+  color: var(--secondary-color);
+  font-size: 14px;
+  margin: 0;
+}
+
+/* 3. Account Settings Danger Zone */
+.profile-danger-zone {
+  max-width: 1200px;
+  margin: 64px auto 0 auto;
+  padding: 0 24px;
+}
+
+.danger-zone-card {
+  background: rgba(220, 38, 38, 0.03);
+  border: 1px solid rgba(220, 38, 38, 0.15);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.danger-text h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--red-color);
+  margin: 0 0 6px 0;
+}
+
+.danger-text p {
+  font-size: 14px;
+  color: var(--secondary-color);
+  margin: 0;
+}
+
+.btn-profile-delete-account {
+  background: transparent;
+  border: 1px solid var(--red-color);
+  color: var(--red-color);
+  font-weight: 600;
+  font-size: 14px;
+  padding: 10px 24px;
+  border-radius: 99px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-profile-delete-account:hover {
+  background: var(--red-color);
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .profile-cover-banner {
+    height: 180px;
+  }
+
+  .profile-info-container {
+    margin-top: -60px;
+  }
+
+  .profile-avatar-inner {
+    width: 120px;
+    height: 120px;
+    border-width: 4px;
+  }
+
+  .profile-feed-section {
+    padding: 48px 16px 0 16px;
+  }
+
+  .profile-danger-zone {
+    padding: 0 16px;
+  }
+
+  .danger-zone-card {
+    padding: 24px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

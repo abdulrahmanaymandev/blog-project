@@ -1,0 +1,108 @@
+.pagination-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin: 48px auto 80px auto;
+  max-width: var(--container);
+  font-family: var(--font-sans);
+}
+
+.pagination-pages {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.pagination-btn {
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  color: var(--secondary-color);
+  font-size: 14px;
+  font-weight: 600;
+  height: 40px;
+  min-width: 40px;
+  border-radius: 99px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 0;
+}
+
+/* Page Numbers */
+.page-num-btn {
+  font-weight: 500;
+}
+
+.page-num-btn:hover {
+  border-color: var(--green-sea-color);
+  color: var(--green-sea-color);
+  background: var(--surface-green);
+  transform: translateY(-1px);
+}
+
+.page-num-btn.is-active {
+  background: var(--green-color);
+  border-color: var(--green-color);
+  color: white;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
+}
+
+/* Nav Buttons (Prev/Next) */
+.pagination-nav-btn {
+  padding: 0 16px;
+  gap: 8px;
+}
+
+.pagination-nav-btn:hover:not(:disabled) {
+  border-color: var(--green-sea-color);
+  color: var(--green-sea-color);
+  background: var(--surface-green);
+  transform: translateY(-1px);
+}
+
+.pagination-nav-btn i {
+  font-size: 14px;
+  transition: transform 0.2s ease;
+}
+
+.pagination-nav-btn.previous:hover i {
+  transform: translateX(-3px);
+}
+
+.pagination-nav-btn.next:hover i {
+  transform: translateX(3px);
+}
+
+/* Disabled */
+.pagination-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  background: var(--surface-muted);
+  border-color: var(--border-color);
+  transform: none !important;
+}
+
+.pagination-dots {
+  padding: 0 6px;
+  color: var(--secondary-color);
+  font-weight: 600;
+}
+@media (max-width: 600px) {
+  .pagination-container {
+    gap: 8px;
+  }
+
+  .pagination-nav-btn span {
+    display: none;
+  }
+
+  .pagination-nav-btn {
+    padding: 0;
+    width: 40px;
+  }
+}
